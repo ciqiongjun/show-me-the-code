@@ -5,7 +5,7 @@ from PIL import Image
 
 def thumb(path):
     size = 1136, 640
-    for pic in glob.glob(path):
+    for pic in glob.glob(path+r'\*.jpg'):
         fn, ext = os.path.splitext(pic)
         im = Image.open(pic)
         im.thumbnail(size)
@@ -14,4 +14,4 @@ def thumb(path):
 
 
 if __name__ == '__main__':
-    thumb(r'd:\gakki\*.jpg')
+    thumb(r'd:\gakki')
